@@ -9,7 +9,7 @@ The JIRA ticket ID is taken from a git branch name.
 Install the package using NPM
 
 ```bash
-npm install husky jira-prepare-commit-msg --save-dev
+npm i -D husky nfq-jira-prepare-commit-msg
 ```
 
 ## Configuration
@@ -20,7 +20,7 @@ Inside your package.json add a standard husky npm script for the git hook:
 {
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "jira-prepare-commit-msg"
+      "prepare-commit-msg": "nfq-jira-prepare-commit-msg"
     }
   }
 }
