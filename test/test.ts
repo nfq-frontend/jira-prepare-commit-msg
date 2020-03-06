@@ -21,7 +21,7 @@ test('husky2 JIRA ticket ID should be in commit message', async t => {
   await exec('git add .gitignore', cwd);
   await exec('git commit -m "test"', cwd);
   const stdout = await exec('git log', cwd);
-  const index = stdout.search(/(\[[A-Z]+-\d+])/i);
+  const index = stdout.search(/([A-Z]+-\d+)/i);
   t.is(index > -1, true);
 });
 
@@ -32,6 +32,6 @@ test('husky3 JIRA ticket ID should be in commit message', async t => {
   await exec('git add .gitignore', cwd);
   await exec('git commit -m "test"', cwd);
   const stdout = await exec('git log', cwd);
-  const index = stdout.search(/(\[[A-Z]+-\d+])/i);
+  const index = stdout.search(/([A-Z]+-\d+)/i);
   t.is(index > -1, true);
 });
